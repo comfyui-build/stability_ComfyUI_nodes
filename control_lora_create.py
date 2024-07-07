@@ -52,7 +52,7 @@ class ControlLoraSave:
     FUNCTION = "save"
     OUTPUT_NODE = True
 
-    CATEGORY = "stability/controlnet"
+    CATEGORY = "controlnet"
 
     def save(self, model, control_net, filename_prefix, rank):
         full_output_folder, filename, counter, subfolder, filename_prefix = folder_paths.get_save_image_path(filename_prefix, self.output_dir)

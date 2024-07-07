@@ -18,7 +18,7 @@ def color_blend(bw_layer,color_layer):
     blended_result = cv2.cvtColor(blended_lab, cv2.COLOR_Lab2BGR)
     return blended_result
 
-class ColorBlend:
+class BwColorBlend:
     def __init__(self):
         pass
 
@@ -34,7 +34,7 @@ class ColorBlend:
     RETURN_TYPES = ("IMAGE",)
     FUNCTION = "color_blending_mode"
 
-    CATEGORY = "stability/image/postprocessing"
+    CATEGORY = "image/postprocessing"
 
     def color_blending_mode(self, bw_layer, color_layer):
         if bw_layer.shape[0] < color_layer.shape[0]:
@@ -65,8 +65,8 @@ class ColorBlend:
 
 
 NODE_CLASS_MAPPINGS = {
-    "ColorBlend": ColorBlend
+    "BwColorBlend": BwColorBlend
 }
 NODE_DISPLAY_NAME_MAPPINGS = {
-    "ColorBlend": "Color Blend"
+    "BwColorBlend": "Bw Color Blend"
 }
